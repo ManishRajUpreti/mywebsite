@@ -1,0 +1,29 @@
+/*
+ * style.css
+ * This file contains custom styles for the personal website.
+ */
+
+/* * Custom scrollbar styling
+ * This makes the scrollbar look a bit nicer on webkit browsers (Chrome, Safari, etc.)
+ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1e293b; /* Scrollbar track color */
+}
+::-webkit-scrollbar-thumb {
+    background: #475569; /* Scrollbar thumb color */
+    border-radius: 4px;
+}
+
+/* * Active navigation link styling
+ * This class is added by the JavaScript to the currently visible section's link
+ */
+.nav-link.active {
+    color: #818cf8; /* A nice purple for active links */
+}
+
+/* * Additional custom styles can be added here.
+ * For example, if you wanted to override some Tailwind classes or add custom animations.
+ */
