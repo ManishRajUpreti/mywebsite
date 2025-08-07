@@ -34,8 +34,8 @@ const Contact = () => {
     try {
       console.log("Form submitted:", formData);
       await emailjs.send(
-        "service_79b0nyj", // Your EmailJS Service ID
-        "template_17us8im", // Your EmailJS Template ID
+        "service_e6d2mjj", // Your EmailJS Service ID
+        "template_aqah5si", // Your EmailJS Template ID
         {
           from_name: formData.name,
           to_name: "Manish Raj Upreti", // Changed to your name
@@ -43,7 +43,7 @@ const Contact = () => {
           to_email: "manishrajupreti@gmail.com", // Changed to your email
           message: formData.message,
         },
-        "pn-Bw_mS1_QQdofuV" // Your EmailJS Public Key
+        "B7QhQJy9zNjo1sT32" // Your EmailJS Public Key
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
