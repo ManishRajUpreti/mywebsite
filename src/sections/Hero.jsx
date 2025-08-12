@@ -15,7 +15,7 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
 
   return (
-    <section className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space">
+    <section className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space" id="hero">
       {/* Component to display your main hero text */}
       <HeroText />
       {/* Component for the parallax background effect */}
