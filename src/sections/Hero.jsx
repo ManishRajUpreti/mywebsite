@@ -6,7 +6,7 @@ import { easing } from "maath"; // Library for smooth mathematical easing
 // import { motion } from "motion/react"; // This import is not used in this component, so it's removed.
 
 import HeroText from "../components/HeroText";
-import ParallaxBackground from "../components/ParallaxBackground";
+import ParallaxBackground from "../components/parallaxBackground";
 import { Astronaut } from "../components/Astronaut"; // Your 3D Astronaut model component
 import Loader from "../components/Loader"; // Loader component for Suspense fallback
 
