@@ -33,7 +33,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }} // Slightly delayed animation
           >
-            A Developer <br /> Passionate about Crafting
+            A Aspiring Developer <br /> Passionate about Crafting
           </motion.p>
           {/* Container for the FlipWords component, also animated */}
           <motion.div
@@ -56,7 +56,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }} // Last in the sequence for desktop
           >
-            Web Platform
+            Web Platforms
           </motion.p>
         </div>
       </div>
@@ -82,7 +82,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            Building
+            Passionate about Crafting
           </motion.p>
           {/* Container for the FlipWords component, also animated */}
           <motion.div
@@ -105,7 +105,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Platform
+            Web Platforms
           </motion.p>
         </div>
       </div>
