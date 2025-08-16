@@ -56,7 +56,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }} // Last in the sequence for desktop
           >
-            Web Solutions
+            Web Platform
           </motion.p>
         </div>
       </div>
