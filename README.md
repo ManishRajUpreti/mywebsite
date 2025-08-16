@@ -1,76 +1,69 @@
-🚀 3D Developer Portfolio
-A modern, animated 3D developer portfolio built with React, Three.js, TailwindCSS, and motion effects. This project is designed to help you stand out and showcase your skills creatively with a unique, visually striking experience.
+# 🚀 3D Developer Portfolio
 
-✨ Features
-3D visuals powered by React Three Fiber and Drei.
+A modern, animated 3D developer portfolio built with **React**, **Three.js**, and **TailwindCSS**. This project is designed to help you stand out and creatively showcase your skills with a unique, visually striking experience.
 
-Smooth transitions and scroll-based animations using Framer Motion.
+---
 
-Clean, responsive UI with TailwindCSS.
+## ✨ Features
 
-Working contact form using EmailJS for direct inquiries.
+-   **Immersive 3D visuals** powered by React Three Fiber and Drei.
+-   **Fluid animations** and **scroll-based effects** using Framer Motion.
+-   **Clean and responsive UI** built with TailwindCSS.
+-   A **working contact form** integrated with EmailJS.
+-   **Enhanced UI components** from Aceternity UI and Magic UI.
+-   **Fast development environment** powered by Vite.
 
-Beautiful UI enhancements with Aceternity UI and Magic UI.
+---
 
-Lightning-fast development with Vite.
+## 🛠 Tech Stack
 
-🛠 Tech Stack
-Tech	Description
-React	Front-end JavaScript library
-Vite	Fast bundler and dev environment
-TailwindCSS	Utility-first CSS framework
-React Three Fiber	3D rendering with Three.js in React
-Drei	Helpers and abstractions for R3F
-Framer Motion	Animation library for React
-EmailJS	Form handling and email integration
-Aceternity UI	Custom UI components
-Magic UI	Prebuilt UI elements and design extras
+| Tech               | Description                                                        |
+| :----------------- | :----------------------------------------------------------------- |
+| **React** | A front-end JavaScript library for building user interfaces.       |
+| **Vite** | A next-generation frontend tooling that provides a fast development experience. |
+| **TailwindCSS** | A utility-first CSS framework for rapidly building custom designs. |
+| **React Three Fiber** | A React renderer for Three.js, making it easy to create 3D graphics in your React app. |
+| **Drei** | A collection of useful helpers and abstractions for React Three Fiber. |
+| **Framer Motion** | A production-ready animation library for React.                    |
+| **EmailJS** | A service to send emails directly from JavaScript, without a backend. |
+| **Aceternity UI** | A set of beautiful, pre-built UI components for React.             |
+| **Magic UI** | Another set of pre-built UI elements and design extras.            |
 
-Export to Sheets
-📁 Project Structure
-├── public/
-│   ├── assets/             # Images, textures, models
-│   ├── models/             # 3D Astronaut model
-│   └── vite.svg
-├── src/
-│   ├── components/         # Reusable components
-│   ├── constants/          # Reusable data (e.g., project details, skills)
-│   ├── sections/           # Portfolio sections (Hero, About, Projects, etc.)
-│   ├── App.jsx             # Main app file
-│   ├── index.css           # Tailwind CSS styles
-│   └── main.jsx            # Entry point
-├── tailwind.config.js
-└── vite.config.js
-🚀 Getting Started
-Follow these steps to get the project up and running on your local machine.
+---
 
-1. Clone the Repository
-Bash
+## 📁 Project Structure
 
-git clone https://github.com/manishrajupreti/mywebsite.git
+
+## 🚀 Getting Started
+
+Follow these steps to set up and run the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone [https://github.com/manishrajupreti/mywebsite.git](https://github.com/manishrajupreti/mywebsite.git)
 cd mywebsite
-2. Install Dependencies
-Bash
 
+### 2. Install Dependencies
+
+```bash
 npm install
-3. Run the Development Server
-Bash
 
+### 3. Run the Development Server
+
+```bash
 npm run dev
-The application will be available at http://localhost:5173.
+The application will be accessible at http://localhost:5173.
 
-🔗 Assets
-The assets used in this project, including 3D models and textures, can be found in the public/ directory.
+## 🔗 Assets & Attributions
+All 3D models, textures, and other assets used in this project are located in the public/ directory.
 
-📬 Contact Me
-Feel free to connect with me!
+## 📬 Contact
+Feel free to reach out to me for questions or collaborations.
 
 GitHub: manishrajupreti
 
-Email: YourEmail@example.com (or other contact info)
+Email: YourEmail@example.com
 
-🙏 Suggestions or Feedback
-If you have any suggestions, feedback, or ideas for improvements, please feel free to open an issue or contact me directly. I'd love to hear from you!
-
-❤️ Like This Project?
-If you find this project helpful or inspiring, please consider giving it a star on GitHub! ⭐
+## ❤️ Suggestions or Feedback
+If you have any suggestions for improving this project, please open an issue or contact me directly. Your feedback is highly appreciated!
