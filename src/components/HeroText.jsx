@@ -33,7 +33,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }} // Slightly delayed animation
           >
-            A Developer <br /> Dedicated to Crafting
+            A Developer <br /> Passionate about Crafting
           </motion.p>
           {/* Container for the FlipWords component, also animated */}
           <motion.div
