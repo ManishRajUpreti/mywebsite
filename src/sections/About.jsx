@@ -47,7 +47,7 @@ const About = () => {
           <div className="relative z-10">
             <p className="text-3xl font-bold">My Location</p>
             <p className="mt-2 text-lg">
-              I'm based in Nepal.
+              I'm from Nepal, located in the lap of the Himalayas.
             </p>
           </div>
           <figure className="absolute right-0 bottom-0 scale-75 md:scale-100">
