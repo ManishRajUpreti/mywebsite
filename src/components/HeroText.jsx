@@ -33,7 +33,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }} // Slightly delayed animation
           >
-            Aspiring Developer <br /> Passionate about Crafting
+            Aspiring Developer <br /> Passionate About Crafting
           </motion.p>
           {/* Container for the FlipWords component, also animated */}
           <motion.div
@@ -45,7 +45,7 @@ const HeroText = () => {
             {/* FlipWords component for animated word transitions */}
             <FlipWords
               words={words}
-              className="font-black text-white text-8xl"
+              className="font-black text-white text-6xl"
             />
           </motion.div>
           {/* Another animated paragraph for desktop */}
@@ -62,10 +62,10 @@ const HeroText = () => {
       </div>
 
       {/* Mobile View - Visible on small screens, hidden on medium and larger */}
-      <div className="flex flex-col space-y-6 md:hidden">
+      <div className="flex flex-col space-y-1 md:hidden">
         {/* Animated paragraph for mobile */}
         <motion.p
-          className="text-4xl font-medium"
+          className="text-3xl font-medium"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -76,7 +76,7 @@ const HeroText = () => {
         <div>
           {/* Animated paragraph for mobile */}
           <motion.p
-            className="text-5xl font-black text-neutral-300"
+            className="text-4xl font-black text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -94,12 +94,12 @@ const HeroText = () => {
             {/* FlipWords component for animated word transitions */}
             <FlipWords
               words={words}
-              className="font-bold text-white text-7xl"
+              className="font-bold text-white text-4xl"
             />
           </motion.div>
           {/* Another animated paragraph for mobile */}
           <motion.p
-            className="text-4xl font-black text-neutral300"
+            className="text-3xl font-black text-neutral300"
             variants={variants}
             initial="hidden"
             animate="visible"
