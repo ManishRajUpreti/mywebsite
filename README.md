@@ -43,17 +43,20 @@ Follow these steps to set up and run the project locally.
 ```bash
 git clone [https://github.com/manishrajupreti/mywebsite.git](https://github.com/manishrajupreti/mywebsite.git)
 cd mywebsite
+```
 
 ### 2. Install Dependencies
 
 ```bash
 npm install
+```
 
 ### 3. Run the Development Server
 
 ```bash
 npm run dev
 The application will be accessible at http://localhost:5173.
+```
 
 ## 🔗 Assets & Attributions
 All 3D models, textures, and other assets used in this project are located in the public/ directory.
