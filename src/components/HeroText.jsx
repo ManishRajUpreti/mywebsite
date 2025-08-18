@@ -22,7 +22,7 @@ const HeroText = () => {
           animate="visible" // Animate to the 'visible' state
           transition={{ delay: 1 }} // Delay the animation start by 1 second
         >
-          Hi, I'm Manish Raj Upreti
+          Hi, I'm an
         </motion.h1>
         <div className="flex flex-col items-start">
           {/* Animated paragraph for desktop */}
@@ -33,7 +33,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }} // Slightly delayed animation
           >
-            An Aspiring Developer <br /> Passionate about Crafting
+            Aspiring Developer <br /> Passionate about Crafting
           </motion.p>
           {/* Container for the FlipWords component, also animated */}
           <motion.div
@@ -71,7 +71,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, I'm Manish
+          Hi, I'm
         </motion.p>
         <div>
           {/* Animated paragraph for mobile */}
@@ -82,7 +82,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            Passionate about Crafting
+            Passionate About Crafting
           </motion.p>
           {/* Container for the FlipWords component, also animated */}
           <motion.div
