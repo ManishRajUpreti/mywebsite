@@ -3,7 +3,7 @@ import { motion } from "framer-motion"; // Corrected import for framer-motion
 
 const HeroText = () => {
   // Words to be used in the FlipWords animation
-  const words = ["Secure", "Modern", "Scalable"];
+  const words = ["Games", "Web Platforms", "AI Applications"];
   // Variants for Framer Motion animations (hidden and visible states)
   const variants = {
     hidden: { opacity: 0, x: -50 }, // Starts invisible and shifted left
@@ -33,7 +33,16 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }} // Slightly delayed animation
           >
-            Aspiring Developer <br /> Passionate About Crafting
+            Aspiring Developer
+          </motion.p>
+          <motion.p
+            className="text-4xl font-medium text-neutral-300"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 1.8 }} // Last in the sequence for desktop
+          >
+            Passionate About Crafting
           </motion.p>
           {/* Container for the FlipWords component, also animated */}
           <motion.div
@@ -49,15 +58,7 @@ const HeroText = () => {
             />
           </motion.div>
           {/* Another animated paragraph for desktop */}
-          <motion.p
-            className="text-4xl font-medium text-neutral-300"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.8 }} // Last in the sequence for desktop
-          >
-            Web Platforms
-          </motion.p>
+          
         </div>
       </div>
 
