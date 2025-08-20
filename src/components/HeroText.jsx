@@ -72,7 +72,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, I'm
+          Hi, I'm an
         </motion.p>
         <div>
           {/* Animated paragraph for mobile */}
@@ -82,6 +82,15 @@ const HeroText = () => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.2 }}
+          >
+            Aspiring Developer
+          </motion.p>
+          <motion.p
+            className="text-3xl font-black text-neutral300"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 1.8 }}
           >
             Passionate About Crafting
           </motion.p>
@@ -99,15 +108,7 @@ const HeroText = () => {
             />
           </motion.div>
           {/* Another animated paragraph for mobile */}
-          <motion.p
-            className="text-3xl font-black text-neutral300"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.8 }}
-          >
-            Web Platforms
-          </motion.p>
+        
         </div>
       </div>
     </div>
