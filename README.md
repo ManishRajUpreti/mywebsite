@@ -55,8 +55,9 @@ npm install
 
 ```bash
 npm run dev
-The application will be accessible at http://localhost:5173.
 ```
+The application will be accessible at http://localhost:5173.
+
 
 ## 🔗 Assets & Attributions
 All 3D models, textures, and other assets used in this project are located in the public/ directory.
@@ -66,7 +67,7 @@ Feel free to reach out to me for questions or collaborations.
 
 GitHub: manishrajupreti
 
-Email: YourEmail@example.com
+Email: manishrajupreti@gmail.com
 
 ## ❤️ Suggestions or Feedback
 If you have any suggestions for improving this project, please open an issue or contact me directly. Your feedback is highly appreciated!
