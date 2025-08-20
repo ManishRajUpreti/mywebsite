@@ -30,8 +30,8 @@ export function Astronaut(props) {
   // Dynamic scale based on screen width for realistic sizing
   const screenWidth = window.innerWidth;
   // Scale decreases as screen width increases, with min/max bounds
-  const baseScale = 0.4; // Base scale for reference (e.g., at 1280px)
-  const scale = Math.max(0.2, Math.min(0.5, baseScale * (1280 / screenWidth))); 
+  const baseScale = 0.2; // Base scale for reference (e.g., at 1280px)
+  const scale = Math.max(0.15, Math.min(0.2, baseScale * (1280 / screenWidth))); 
   // Position centered for all screen sizes
   const position = props.position || [0, -1, 0];
 
