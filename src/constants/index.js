@@ -17,7 +17,36 @@
 //     { id: 2, name: "Technology 2", path: "/assets/logos/tech2.svg" },
 //   ],
 // },
-export const myProjects = [];
+// constants/index.js
+
+export const myProjects = [
+  // ... your existing projects
+  {
+    id: 1,
+    title: "MindSpace",
+    description: "A collaborative web application where users can save memories and create an AI chatbot based on them. Other users can then interact with the chatbot to learn about the owner's memories.",
+    subDescription: [
+      "We worked on the core functionality, including the user authentication system, memory management, and integrating the Gemini API for the chatbot responses.",
+      "This project was a major team effort, and I'm proud of the collaboration and problem-solving we did together.",
+      "The front-end was built with React and Tailwind CSS for a modern, responsive design, while the back-end used Node.js and Express.",
+    ],
+    href: "#", // Placeholder for now, you can add the URL later
+    image: "assets/mindspace-preview.jpg", // You'll need to add a preview image in this location
+    tags: [
+      { id: 1, name: "React", path: "assets/react.svg" },
+      { id: 2, name: "Tailwind CSS", path: "assets/tailwind.svg" },
+      { id: 3, name: "Node.js", path: "assets/nodejs.svg" },
+      { id: 4, name: "Express", path: "assets/express.svg" },
+      { id: 5, name: "Gemini API", path: "assets/gemini.svg" },
+    ],
+    team: [
+      { name: "Manish Raj Upreti" },  
+      { name: "Bishal Bista" },
+      { name: "Kshitiz Upadhayaya" },
+      { name: "Avinash Pandeya" },
+    ],
+  },
+];
 
 // This array will hold links to your social media profiles.
 // Add objects here with details like:
