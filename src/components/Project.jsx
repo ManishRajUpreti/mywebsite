@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ProjectDetails from "../components/ProjectDetails"; // Assuming ProjectDetails is in a separate file
-import { myProjects } from "../constants/";
 
 const Project = ({
   title,
