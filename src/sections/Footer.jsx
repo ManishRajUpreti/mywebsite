@@ -6,7 +6,6 @@ const Footer = () => {
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/manishrajupreti",
-      // Inline SVG for the LinkedIn icon with its brand color
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +20,6 @@ const Footer = () => {
     {
       name: "Instagram",
       href: "https://www.instagram.com/manishrajupreti",
-      // Corrected inline SVG for the Instagram icon with a gradient fill
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,16 +39,29 @@ const Footer = () => {
         </svg>
       ),
     },
+    {
+      name: "GitHub",
+      href: "https://github.com/manishrajupreti", // Your GitHub profile URL
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-5 h-5 transition-transform duration-200 transform hover:scale-125"
+        >
+          <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.008c0 4.264 2.868 7.85 6.83 9.176.5.09.682-.218.682-.483 0-.237-.008-.867-.012-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.002.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.085 2.91.829.091-.641.352-1.085.64-1.336-2.22-.251-4.555-1.114-4.555-4.942 0-1.09.39-1.984 1.029-2.682-.103-.251-.446-1.269.098-2.651 0 0 .84-.27 2.75 1.025A9.303 9.303 0 0 1 12 6.647c.85.006 1.7.115 2.5.324 1.909-1.296 2.747-1.025 2.747-1.025.546 1.382.203 2.399.098 2.651.64.698 1.028 1.592 1.028 2.682 0 3.837-2.335 4.687-4.564 4.935.359.307.678.915.678 1.846 0 1.334-.012 2.41-.012 2.73 0 .265.18.57.684.484C19.13 19.852 22 16.265 22 12.008 22 6.484 17.523 2 12 2" clipRule="evenodd" />
+        </svg>
+      ),
+    },
   ];
 
-  const currentYear = new Date().getFullYear(); // Get the current year dynamically
-  const yourName = "Manish Raj Upreti"; // Your full name for the copyright
+  const currentYear = new Date().getFullYear();
+  const yourName = "Manish Raj Upreti";
 
   return (
     <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 p-8">
       <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
       <div className="flex gap-2">
-        {/* These links are placeholders for your actual pages */}
         <a href="/terms" className="hover:text-white transition-colors duration-200">
           Terms & Conditions
         </a>
@@ -68,12 +79,10 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label={`Link to my ${social.name}`}
           >
-            {/* Render the icon component directly */}
             {social.icon}
           </a>
         ))}
       </div>
-      {/* Personalized copyright with dynamic year */}
       <p>&copy; {currentYear} {yourName}. All rights reserved.</p>
     </section>
   );
