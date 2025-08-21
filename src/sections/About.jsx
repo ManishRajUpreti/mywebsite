@@ -59,9 +59,9 @@ const About = () => {
             alt="A close-up view of a person's hands coding on a laptop." 
           />
           <div className="relative z-10">
-            <p className="text-4xl font-bold md:text-5xl">Hi, I'm {myName}</p>
-            <p className="mt-2 text-lg">
-              As {yearsOfExperience}, I'm passionate about learning frontend and backend development to build engaging web applications.
+            <p className="text-4xl font-bold md:text-4xl">Hi, I'm {myName}</p>
+            <p className="mt-2 text-lg text-gray-300">
+              As {yearsOfExperience}, I'm passionate about learning frontend and backend development to build engaging web applications. I'm also actively exploring the fields of game development and artificial intelligence, always seeking new ways to create interactive and intelligent user experiences.
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ const About = () => {
           ref={el => cardRefs.current[1] = el}
           className="relative flex flex-col items-center justify-center p-6 rounded-lg bg-gray-700 md:col-span-3 transition-transform duration-150"
         >
-          <h3 className="text-3xl font-bold text-gray-400">Learning is a Craft</h3>
+          <h3 className="text-3xl font-bold">Learning is a Craft</h3>
           <p className="mt-2 text-center text-lg text-gray-300">
             I'm focusing on building a strong foundation with core principles and clean code.
           </p>
@@ -96,7 +96,7 @@ const About = () => {
           <div className="relative z-10 flex flex-col h-full justify-between">
             <p className="text-3xl font-bold">My Location</p>
             <p className="mt-2 text-lg">
-              I'm from Nepal.
+              I'm from Nepal, a country of immense natural beauty. It is renowned for its diverse landscapes, rich cultural heritage, and breathtaking Himalayan peaks.
             </p>
           </div>
         </div>
@@ -107,7 +107,7 @@ const About = () => {
           className="relative flex flex-col items-center justify-center p-6 text-center rounded-lg bg-blue-600 text-white md:col-span-2 transition-transform duration-150"
         >
           <p className="text-3xl font-bold">Let's Connect</p>
-          <p className="mt-2 text-lg">
+          <p className="mt-2 text-lg text-gray-300">
             I'm always excited to work on new projects and ideas.
           </p>
           <CopyEmailButton />
@@ -120,7 +120,7 @@ const About = () => {
         >
           <div className="relative z-10">
             <p className="text-3xl font-bold">Tech Stack</p>
-            <p className="mt-2 text-lg">
+            <p className="mt-2 text-lg text-gray-300">
               I'm specializing in frameworks and tools for building robust applications.
             </p>
           </div>
