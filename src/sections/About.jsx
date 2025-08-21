@@ -55,7 +55,7 @@ const About = () => {
           <div className="relative z-10 flex flex-col h-full justify-between">
             <p className="text-3xl font-bold">My Location</p>
             <p className="mt-2 text-lg">
-              I'm from Nepal, located in the lap of the Himalayas.
+              I'm from Nepal.
             </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ const About = () => {
         <div className="relative flex flex-col items-center justify-center p-6 text-center rounded-lg bg-blue-600 text-white md:col-span-2">
           <p className="text-3xl font-bold">Let's Connect</p>
           <p className="mt-2 text-lg">
-            I'm always excited to work on new projects.
+            I'm always excited to work on new projects and ideas.
           </p>
           <CopyEmailButton />
         </div>
