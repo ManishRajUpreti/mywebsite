@@ -1,13 +1,46 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
 
 const About = () => {
-  const grid2Container = useRef();
-  const myName = "Manish Raj Upreti"; 
-  const yearsOfExperience = "a beginner"; 
+  const myName = "Manish Raj Upreti";
+  const yearsOfExperience = "a beginner";
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      cardRefs.current.forEach((card) => {
+        if (card && card.contains(e.target)) {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          
+          // Increased sensitivity by changing denominator from 20 to 12
+          const rotateX = -(y - centerY) / 12; 
+          const rotateY = (x - centerX) / 12;
+
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        } else if (card) {
+          card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+        }
+      });
+    };
+
+    const section = document.getElementById("about");
+    if (section) {
+      section.addEventListener("mousemove", handleMouseMove);
+    }
+    
+    return () => {
+      if (section) {
+        section.removeEventListener("mousemove", handleMouseMove);
+      }
+    };
+  }, []);
 
   return (
     <section className="c-space section-spacing" id="about">
@@ -15,7 +48,11 @@ const About = () => {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         
         {/* Grid 1: Personal Introduction */}
-        <div className="relative flex items-end p-6 overflow-hidden text-white rounded-lg bg-gray-800 md:col-span-3">
+        <div 
+          ref={el => cardRefs.current[0] = el}
+          // Faster transition duration (from duration-300 to duration-150)
+          className="relative flex items-end p-6 overflow-hidden text-white rounded-lg bg-gray-800 md:col-span-3 transition-transform duration-150"
+        >
           <img
             src="assets/coding-pov.png"
             className="absolute inset-0 object-cover w-full h-full opacity-30"
@@ -30,7 +67,10 @@ const About = () => {
         </div>
 
         {/* Grid 2: Core Principles */}
-        <div className="relative flex flex-col items-center justify-center p-6 rounded-lg bg-gray-700 md:col-span-3">
+        <div 
+          ref={el => cardRefs.current[1] = el}
+          className="relative flex flex-col items-center justify-center p-6 rounded-lg bg-gray-700 md:col-span-3 transition-transform duration-150"
+        >
           <h3 className="text-3xl font-bold text-gray-400">Learning is a Craft</h3>
           <p className="mt-2 text-center text-lg text-gray-300">
             I'm focusing on building a strong foundation with core principles and clean code.
@@ -43,15 +83,16 @@ const About = () => {
         </div>
 
         {/* Grid 3: Time Zone and Location */}
-        <div className="relative flex flex-col p-6 rounded-lg bg-black text-white md:col-span-2">
-          {/* Globe in the background with proper z-index and overflow */}
+        <div 
+          ref={el => cardRefs.current[2] = el}
+          className="relative flex flex-col p-6 rounded-lg bg-black text-white md:col-span-2 transition-transform duration-150"
+        >
           <figure className="absolute inset-0 z-0 overflow-hidden">
             <div className="absolute inset-0 right-0 -bottom-1/2 scale-100 md:bottom-0">
               <Globe />
             </div>
           </figure>
           
-          {/* Text in the foreground with proper z-index */}
           <div className="relative z-10 flex flex-col h-full justify-between">
             <p className="text-3xl font-bold">My Location</p>
             <p className="mt-2 text-lg">
@@ -61,7 +102,10 @@ const About = () => {
         </div>
 
         {/* Grid 4: Call to Action */}
-        <div className="relative flex flex-col items-center justify-center p-6 text-center rounded-lg bg-blue-600 text-white md:col-span-2">
+        <div 
+          ref={el => cardRefs.current[3] = el}
+          className="relative flex flex-col items-center justify-center p-6 text-center rounded-lg bg-blue-600 text-white md:col-span-2 transition-transform duration-150"
+        >
           <p className="text-3xl font-bold">Let's Connect</p>
           <p className="mt-2 text-lg">
             I'm always excited to work on new projects and ideas.
@@ -70,7 +114,10 @@ const About = () => {
         </div>
 
         {/* Grid 5: Tech Stack */}
-        <div className="relative flex flex-col p-6 rounded-lg bg-gray-800 text-white md:col-span-2">
+        <div 
+          ref={el => cardRefs.current[4] = el}
+          className="relative flex flex-col p-6 rounded-lg bg-gray-800 text-white md:col-span-2 transition-transform duration-150"
+        >
           <div className="relative z-10">
             <p className="text-3xl font-bold">Tech Stack</p>
             <p className="mt-2 text-lg">
