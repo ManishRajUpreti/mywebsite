@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
@@ -13,6 +13,8 @@ const Contact = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState("success");
   const [alertMessage, setAlertMessage] = useState("");
+
+  const formRef = useRef();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -55,8 +57,41 @@ const Contact = () => {
     }
   };
 
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const formElement = formRef.current;
+      if (formElement) {
+        const rect = formElement.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Adjust sensitivity as needed
+        const rotateX = -(y - centerY) / 12; 
+        const rotateY = (x - centerX) / 12;
+
+        formElement.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      }
+    };
+    
+    const formContainer = formRef.current;
+    if (formContainer) {
+      formContainer.addEventListener("mousemove", handleMouseMove);
+      formContainer.addEventListener("mouseleave", () => {
+        formContainer.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+      });
+    }
+
+    return () => {
+      if (formContainer) {
+        formContainer.removeEventListener("mousemove", handleMouseMove);
+        formContainer.removeEventListener("mouseleave", () => {}); // Clean up mouseleave
+      }
+    };
+  }, []);
+
   return (
-    // Added id="contact" here to match the navigation link
     <section className="relative flex items-center c-space section-spacing" id="contact">
       <Particles
         className="absolute inset-0 -z-50"
@@ -66,7 +101,10 @@ const Contact = () => {
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
+      <div 
+        ref={formRef}
+        className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary transition-transform duration-150"
+      >
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let's Connect</h2>
           <p className="font-normal text-neutral-400">
