@@ -15,7 +15,7 @@ const Projects = () => {
       <h2 className="text-heading">My Selected Projects</h2>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
 
-      <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-2">
         {myProjects.map((project) => (
           <Project key={project.id} {...project} />
         ))}
