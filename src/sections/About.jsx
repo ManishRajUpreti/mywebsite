@@ -5,132 +5,142 @@ import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
 
 const About = () => {
-  const myName = "Manish Raj Upreti";
-  const yearsOfExperience = "a beginner";
-  const cardRefs = useRef([]);
+  const myName = "Manish Raj Upreti";
+  const yearsOfExperience = "a beginner";
+  const cardRefs = useRef([]);
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      cardRefs.current.forEach((card) => {
-        if (card && card.contains(e.target)) {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          const centerX = rect.width / 2;
-          const centerY = rect.height / 2;
-          
-          // Increased sensitivity by changing denominator from 20 to 12
-          const rotateX = -(y - centerY) / 12; 
-          const rotateY = (x - centerX) / 12;
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      cardRefs.current.forEach((card) => {
+        if (card && card.contains(e.target)) {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          
+          // Increased sensitivity by changing denominator from 20 to 12
+          const rotateX = -(y - centerY) / 12; 
+          const rotateY = (x - centerX) / 12;
 
-          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        } else if (card) {
-          card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
-        }
-      });
-    };
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        } else if (card) {
+          card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+        }
+      });
+    };
 
-    const section = document.getElementById("about");
-    if (section) {
-      section.addEventListener("mousemove", handleMouseMove);
-    }
-    
-    return () => {
-      if (section) {
-        section.removeEventListener("mousemove", handleMouseMove);
-      }
-    };
-  }, []);
+    const section = document.getElementById("about");
+    if (section) {
+      section.addEventListener("mousemove", handleMouseMove);
+    }
+    
+    return () => {
+      if (section) {
+        section.removeEventListener("mousemove", handleMouseMove);
+      }
+    };
+  }, []);
 
-  return (
-    <section className="c-space section-spacing" id="about">
-      <h2 className="text-heading">About Me</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
-        
-        {/* Grid 1: Personal Introduction */}
-        <div 
-          ref={el => cardRefs.current[0] = el}
-          // Faster transition duration (from duration-300 to duration-150)
-          className="relative flex items-end p-6 overflow-hidden text-white rounded-lg bg-gray-800 md:col-span-3 transition-transform duration-150"
-        >
-          <img
-            src="assets/coding-pov.png"
-            className="absolute inset-0 object-cover w-full h-full opacity-30"
-            alt="A close-up view of a person's hands coding on a laptop." 
-          />
-          <div className="relative z-10">
-            <p className="text-4xl font-bold md:text-4xl">Hi, I'm {myName}</p>
-            <p className="mt-2 text-lg text-gray-300">
-              As {yearsOfExperience}, I'm passionate about learning frontend and backend development to build engaging web applications. I'm also actively exploring the fields of game development and artificial intelligence, always seeking new ways to create interactive and intelligent user experiences.
-            </p>
-          </div>
-        </div>
+  return (
+    <section className="c-space section-spacing" id="about">
+      <h2 className="text-heading">About Me</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
+        
+        {/* Grid 1: Personal Introduction */}
+        <div 
+          ref={el => cardRefs.current[0] = el}
+          className="relative flex items-end p-6 overflow-hidden text-white rounded-lg bg-gray-800 md:col-span-3 transition-transform duration-150"
+        >
+          <img
+            src="assets/coding-pov.png"
+            className="absolute inset-0 object-cover w-full h-full opacity-30"
+            alt="A close-up view of a person's hands coding on a laptop." 
+          />
+          <div className="relative z-10">
+            {/* Changed from text-4xl to text-3xl on mobile */}
+            <p className="text-3xl font-bold md:text-4xl">Hi, I'm {myName}</p>
+            {/* Changed from text-lg to text-base on mobile */}
+            <p className="mt-2 text-base text-gray-300 md:text-lg">
+              As {yearsOfExperience}, I'm passionate about learning frontend and backend development to build engaging web applications. I'm also actively exploring the fields of game development and artificial intelligence, always seeking new ways to create interactive and intelligent user experiences.
+            </p>
+          </div>
+        </div>
 
-        {/* Grid 2: Core Principles */}
-        <div 
-          ref={el => cardRefs.current[1] = el}
-          className="relative flex flex-col items-center justify-center p-6 rounded-lg bg-gray-700 md:col-span-3 transition-transform duration-150"
-        >
-          <h3 className="text-3xl font-bold">Learning is a Craft</h3>
-          <p className="mt-2 text-center text-lg text-gray-300">
-            I'm focusing on building a strong foundation with core principles and clean code.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mt-4">
-            <span className="px-3 py-1 text-sm font-semibold rounded-full bg-pink-500/20 text-pink-300">SOLID</span>
-            <span className="px-3 py-1 text-sm font-semibold rounded-full bg-pink-500/20 text-pink-300">Design Patterns</span>
-            <span className="px-3 py-1 text-sm font-semibold rounded-full bg-pink-500/20 text-pink-300">React</span>
-          </div>
-        </div>
+        {/* Grid 2: Core Principles */}
+        <div 
+          ref={el => cardRefs.current[1] = el}
+          className="relative flex flex-col items-center justify-center p-6 rounded-lg bg-gray-700 md:col-span-3 transition-transform duration-150"
+        >
+          {/* Changed from text-3xl to text-2xl on mobile */}
+          <h3 className="text-2xl font-bold md:text-3xl">Learning is a Craft</h3>
+          {/* Changed from text-lg to text-base on mobile */}
+          <p className="mt-2 text-center text-base text-gray-300 md:text-lg">
+            I'm focusing on building a strong foundation with core principles and clean code.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 mt-4">
+            {/* Changed from text-sm to text-xs on mobile */}
+            <span className="px-3 py-1 text-xs font-semibold rounded-full bg-pink-500/20 text-pink-300 md:text-sm">SOLID</span>
+            <span className="px-3 py-1 text-xs font-semibold rounded-full bg-pink-500/20 text-pink-300 md:text-sm">Design Patterns</span>
+            <span className="px-3 py-1 text-xs font-semibold rounded-full bg-pink-500/20 text-pink-300 md:text-sm">React</span>
+          </div>
+        </div>
 
-        {/* Grid 3: Time Zone and Location */}
-        <div 
-          ref={el => cardRefs.current[2] = el}
-          className="relative flex flex-col p-6 rounded-lg bg-black text-white md:col-span-2 transition-transform duration-150"
-        >
-          <figure className="absolute inset-0 z-0 overflow-hidden">
-            <div className="absolute inset-0 right-0 -bottom-1/2 scale-100 md:bottom-0">
-              <Globe />
-            </div>
-          </figure>
-          
-          <div className="relative z-10 flex flex-col h-full justify-between">
-            <p className="text-3xl font-bold">My Location</p>
-            <p className="mt-2 text-lg">
-              I'm from Nepal, a country of immense natural beauty. It is renowned for its diverse landscapes, rich cultural heritage, and breathtaking Himalayan peaks.
-            </p>
-          </div>
-        </div>
+        {/* Grid 3: Time Zone and Location */}
+        <div 
+          ref={el => cardRefs.current[2] = el}
+          className="relative flex flex-col p-6 rounded-lg bg-black text-white md:col-span-2 transition-transform duration-150"
+        >
+          <figure className="absolute inset-0 z-0 overflow-hidden">
+            <div className="absolute inset-0 right-0 -bottom-1/2 scale-100 md:bottom-0">
+              <Globe />
+            </div>
+          </figure>
+          
+          <div className="relative z-10 flex flex-col h-full justify-between">
+            {/* Changed from text-3xl to text-2xl on mobile */}
+            <p className="text-2xl font-bold md:text-3xl">My Location</p>
+            {/* Changed from text-lg to text-base on mobile */}
+            <p className="mt-2 text-base md:text-lg">
+              I'm from Nepal, a country of immense natural beauty. It is renowned for its diverse landscapes, rich cultural heritage, and breathtaking Himalayan peaks.
+            </p>
+          </div>
+        </div>
 
-        {/* Grid 4: Call to Action */}
-        <div 
-          ref={el => cardRefs.current[3] = el}
-          className="relative flex flex-col items-center justify-center p-6 text-center rounded-lg bg-blue-600 text-white md:col-span-2 transition-transform duration-150"
-        >
-          <p className="text-3xl font-bold">Let's Connect</p>
-          <p className="mt-2 text-lg text-gray-300">
-            I'm always excited to work on new projects and ideas.
-          </p>
-          <CopyEmailButton />
-        </div>
+        {/* Grid 4: Call to Action */}
+        <div 
+          ref={el => cardRefs.current[3] = el}
+          className="relative flex flex-col items-center justify-center p-6 text-center rounded-lg bg-blue-600 text-white md:col-span-2 transition-transform duration-150"
+        >
+          {/* Changed from text-3xl to text-2xl on mobile */}
+          <p className="text-2xl font-bold md:text-3xl">Let's Connect</p>
+          {/* Changed from text-lg to text-base on mobile */}
+          <p className="mt-2 text-base text-gray-300 md:text-lg">
+            I'm always excited to work on new projects and ideas.
+          </p>
+          <CopyEmailButton />
+        </div>
 
-        {/* Grid 5: Tech Stack */}
-        <div 
-          ref={el => cardRefs.current[4] = el}
-          className="relative flex flex-col p-6 rounded-lg bg-gray-800 text-white md:col-span-2 transition-transform duration-150"
-        >
-          <div className="relative z-10">
-            <p className="text-3xl font-bold">Tech Stack</p>
-            <p className="mt-2 text-lg text-gray-300">
-              I'm specializing in frameworks and tools for building robust applications.
-            </p>
-          </div>
-          <div className="absolute right-0 bottom-0 md:scale-125">
-            <Frameworks />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        {/* Grid 5: Tech Stack */}
+        <div 
+          ref={el => cardRefs.current[4] = el}
+          className="relative flex flex-col p-6 rounded-lg bg-gray-800 text-white md:col-span-2 transition-transform duration-150"
+        >
+          <div className="relative z-10">
+            {/* Changed from text-3xl to text-2xl on mobile */}
+            <p className="text-2xl font-bold md:text-3xl">Tech Stack</p>
+            {/* Changed from text-lg to text-base on mobile */}
+            <p className="mt-2 text-base text-gray-300 md:text-lg">
+              I'm specializing in frameworks and tools for building robust applications.
+            </p>
+          </div>
+          <div className="absolute right-0 bottom-0 md:scale-125">
+            <Frameworks />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;
