@@ -91,7 +91,7 @@ const About = () => {
           ref={el => cardRefs.current[2] = el}
           className="relative flex flex-col p-6 rounded-lg bg-black text-white md:col-span-2 transition-transform duration-150"
         >
-          <figure className="absolute inset-0 z-0 overflow-hidden">
+          <figure className="absolute inset-0 z-0 overflow-hidden md:rounded-lg">
             <div className="absolute inset-0 right-0 -bottom-1/2 scale-100 md:bottom-0">
               <Globe />
             </div>
