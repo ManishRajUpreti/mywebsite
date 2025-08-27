@@ -52,9 +52,9 @@ function hexToRgb(hex) {
 
 export const Particles = ({
   className = "", // Additional CSS classes for the container
-  quantity = 100, // Number of particles
+  quantity = 400, // Number of particles
   staticity = 50, // How much particles resist mouse movement (higher = less movement)
-  ease = 50, // How smoothly particles follow the mouse (higher = slower follow)
+  ease = 150, // How smoothly particles follow the mouse (higher = slower follow)
   size = 0.4, // Base size of the particles
   refresh = false, // Trigger a re-initialization of particles
   color = "#ffffff", // Color of the particles in hex
