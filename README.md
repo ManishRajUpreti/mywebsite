@@ -4,7 +4,7 @@ A modern, animated 3D developer portfolio built with **React**, **Three.js**, an
 
 ---
 
-## ✨ Features
+## ✨ Featuress
 
 -   **Immersive 3D visuals** powered by React Three Fiber and Drei.
 -   **Fluid animations** and **scroll-based effects** using Framer Motion.
@@ -32,6 +32,36 @@ A modern, animated 3D developer portfolio built with **React**, **Three.js**, an
 ---
 
 ## 📁 Project Structure
+```
+.
+├── public/
+│   ├── assets/
+│   |   └── ...
+│   ├── models/
+│   |   └── ...
+│   └── ...
+├── src/
+|   ├── components/
+|   |   ├── Alert.jsx
+|   |   └── ...
+|   ├── constants/
+|   |   └── index.js
+|   ├── sections/
+|   |   ├── About.jsx
+|   |   └── ...
+|   ├── App.jsx
+|   ├── index.css
+|   └── main.jsx
+├── .gitignore
+├── .npmrc
+├── index.html
+├── package.json
+├── package-lock.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+
+```
 
 
 ## 🚀 Getting Started
@@ -61,6 +91,11 @@ The application will be accessible at http://localhost:5173.
 
 ## 🔗 Assets & Attributions
 All 3D models, textures, and other assets used in this project are located in the public/ directory.
+
+## 🚀 Deployment
+This project is deployed on **Vercel**.  
+🔗 Live URL: [manishrajupreti.com.np](https://manishrajupreti.com.np)
+
 
 ## 📬 Contact
 Feel free to reach out to me for questions or collaborations.
