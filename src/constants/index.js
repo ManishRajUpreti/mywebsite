@@ -45,6 +45,7 @@ export const myProjects = [
       { name: "Kshitiz Upadhayaya" },
       { name: "Avinash Pandeya" },
     ],
+    borderColor: "border-blue-500",
   },
 ];
 
