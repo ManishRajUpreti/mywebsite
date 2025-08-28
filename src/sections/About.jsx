@@ -62,7 +62,7 @@ const About = () => {
             <p className="text-3xl font-bold md:text-4xl">Hi, I'm {myName}</p>
             {/* Changed from text-lg to text-base on mobile */}
             <p className="mt-2 text-base text-gray-300 md:text-lg">
-              As {yearsOfExperience}, I'm passionate about learning frontend and backend development to build engaging web applications. I'm also actively exploring the fields of game development and artificial intelligence, always seeking new ways to create interactive and intelligent user experiences.
+              As {yearsOfExperience}, I'm passionate about learning frontend and backend development to build engaging web applications. I'm also actively exploring the fields of game development and Artificial Intelligence, always seeking new ways to create interactive and intelligent user experiences.
             </p>
           </div>
         </div>
