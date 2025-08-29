@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import ProjectDetails from "../components/ProjectDetails";
 
 const Project = ({
@@ -13,52 +13,13 @@ const Project = ({
 }) => {
   const [isHidden, setIsHidden] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const cardRef = useRef(null);
-
-  useEffect(() => {
-    const card = cardRef.current;
-
-    const handleMouseMove = (e) => {
-      if (!card) return;
-
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rotateX = -(y - centerY) / 12;
-      const rotateY = (x - centerX) / 12;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-    };
-
-    const resetRotate = () => {
-      if (card) {
-        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
-      }
-    };
-
-    if (card) {
-      card.addEventListener("mousemove", handleMouseMove);
-      card.addEventListener("mouseleave", resetRotate);
-    }
-
-    return () => {
-      if (card) {
-        card.removeEventListener("mousemove", handleMouseMove);
-        card.removeEventListener("mouseleave", resetRotate);
-      }
-    };
-  }, []);
 
   return (
     <>
-      {/* Outer wrapper handles the transform */}
-      <div ref={cardRef} className="transition-transform duration-150">
-        {/* Inner card preserves rounded corners */}
+      {/* Card (no 3D tilt) */}
+      <div className="relative h-96 overflow-hidden rounded-xl cursor-pointer group shadow-lg border-2 transition duration-150 hover:shadow-xl ${borderColor}">
         <div
-          className={`relative h-96 overflow-hidden rounded-xl cursor-pointer group shadow-lg border-2 ${borderColor}`}
+          className={`relative h-full`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
