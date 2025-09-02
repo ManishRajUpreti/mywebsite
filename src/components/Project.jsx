@@ -9,7 +9,6 @@ const Project = ({
   image,
   tags,
   team,
-  borderColor = "border-blue-500", // Default border color
 }) => {
   const [isHidden, setIsHidden] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
