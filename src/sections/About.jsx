@@ -110,7 +110,7 @@ const About = () => {
         {/* Grid 4: Call to Action */}
         <div 
           ref={el => cardRefs.current[3] = el}
-          className="relative flex flex-col items-center justify-center p-6 text-center rounded-lg bg-blue-600 text-white md:col-span-2 transition-transform duration-150"
+          className="relative flex flex-col items-center justify-center p-6 text-center rounded-lg bg-gray-700 text-white md:col-span-2 transition-transform duration-150"
         >
           {/* Changed from text-3xl to text-2xl on mobile */}
           <p className="text-2xl font-bold md:text-3xl">Let's Connect</p>
@@ -118,7 +118,9 @@ const About = () => {
           <p className="mt-2 text-base text-gray-300 md:text-lg">
             I'm always excited to work on new projects and ideas.
           </p>
-          <CopyEmailButton />
+          <div className="bg-blue-700 rounded-lg">
+            <CopyEmailButton />
+          </div>
         </div>
 
         {/* Grid 5: Tech Stack */}
