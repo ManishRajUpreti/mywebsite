@@ -1,10 +1,10 @@
-# 🚀 3D Developer Portfolio
+# 3D Developer Portfolio
 
 A modern, animated 3D developer portfolio built with **React**, **Three.js**, and **TailwindCSS**. This project is designed to help you stand out and creatively showcase your skills with a unique, visually striking experience.
 
 ---
 
-## ✨ Featuress
+## Featuress
 
 -   **Immersive 3D visuals** powered by React Three Fiber and Drei.
 -   **Fluid animations** and **scroll-based effects** using Framer Motion.
@@ -15,7 +15,7 @@ A modern, animated 3D developer portfolio built with **React**, **Three.js**, an
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Tech               | Description                                                        |
 | :----------------- | :----------------------------------------------------------------- |
@@ -31,7 +31,7 @@ A modern, animated 3D developer portfolio built with **React**, **Three.js**, an
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 .
 ├── public/
@@ -64,7 +64,7 @@ A modern, animated 3D developer portfolio built with **React**, **Three.js**, an
 ```
 
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to set up and run the project locally.
 
@@ -89,15 +89,15 @@ npm run dev
 The application will be accessible at http://localhost:5173.
 
 
-## 🔗 Assets & Attributions
+## Assets & Attributions
 All 3D models, textures, and other assets used in this project are located in the public/ directory.
 
-## 🚀 Deployment
+## Deployment
 This project is deployed on **Vercel**.  
 🔗 Live URL: [manishrajupreti.com.np](https://manishrajupreti.com.np)
 
 
-## 📬 Contact
+## Contact
 Feel free to reach out to me for questions or collaborations.
 
 GitHub: manishrajupreti
