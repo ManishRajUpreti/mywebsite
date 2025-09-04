@@ -1,4 +1,4 @@
-# 3D Developer Portfolio
+# Portfolio
 
 A modern, animated 3D developer portfolio built with **React**, **Three.js**, and **TailwindCSS**. This project is designed to help you stand out and creatively showcase your skills with a unique, visually striking experience.
 
@@ -68,20 +68,20 @@ A modern, animated 3D developer portfolio built with **React**, **Three.js**, an
 
 Follow these steps to set up and run the project locally.
 
-### 1. Clone the Repository
+1. Clone the Repository
 
 ```bash
 git clone [https://github.com/manishrajupreti/mywebsite.git](https://github.com/manishrajupreti/mywebsite.git)
 cd mywebsite
 ```
 
-### 2. Install Dependencies
+2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Run the Development Server
+3. Run the Development Server
 
 ```bash
 npm run dev
@@ -104,5 +104,5 @@ GitHub: manishrajupreti
 
 Email: manishrajupreti@gmail.com
 
-## ❤️ Suggestions or Feedback
+## Suggestions or Feedback
 If you have any suggestions for improving this project, please open an issue or contact me directly. Your feedback is highly appreciated!
