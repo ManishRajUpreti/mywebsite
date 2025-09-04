@@ -4,7 +4,7 @@ A modern, animated 3D developer portfolio built with **React**, **Three.js**, an
 
 ---
 
-## Featuress
+## Features
 
 -   **Immersive 3D visuals** powered by React Three Fiber and Drei.
 -   **Fluid animations** and **scroll-based effects** using Framer Motion.
