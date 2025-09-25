@@ -45,7 +45,7 @@ const About = () => {
   
   // Animation variants
   const cardVariant = {
-    hidden: { opacity: 0, x: -100 },
+    hidden: { opacity: 0, x: -200 },
     visible: (i) => ({
       opacity: 1,
       x: 0,
