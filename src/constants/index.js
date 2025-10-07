@@ -30,7 +30,7 @@ export const myProjects = [
       "This project was a major team effort, and I'm proud of the collaboration and problem-solving we did together.",
       "The front-end was built with React and Tailwind CSS for a modern, responsive design, while the back-end used Node.js and Express.",
     ],
-    href: "#", // Placeholder for now, you can add the URL later
+    href: "https://github.com/ManishRajUpreti/MindSpace", // Placeholder for now, you can add the URL later
     image: "assets/projects/mindspace.png", // You'll need to add a preview image in this location
     tags: [
       { id: 1, name: "React", path: "assets/logos/react.svg" },
