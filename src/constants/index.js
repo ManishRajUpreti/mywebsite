@@ -36,8 +36,6 @@ export const myProjects = [
       { id: 1, name: "React", path: "assets/logos/react.svg" },
       { id: 2, name: "Node.js", path: "assets/logos/nodejs.svg" },
       { id: 3, name: "Express", path: "assets/logos/express.png" },
-      { id: 4, name: "Gemini API", path: "assets/logos/gemini.png" },
-      { id: 5, name: "Tailwind CSS", path: "assets/logos/tailwindcss.svg" },
     ],
     team: [
       { name: "Manish Raj Upreti" },  
