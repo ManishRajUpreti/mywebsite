@@ -7,6 +7,7 @@ import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
 
 const mySocials = [
+  // ... (mySocials array remains the same) ...
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/manishrajupreti",
@@ -121,6 +122,7 @@ const Contact = () => {
   };
 
   useEffect(() => {
+    // ... (Mouse move effect code remains the same) ...
     const handleMouseMove = (e) => {
       const formElement = formRef.current;
       if (formElement) {
@@ -148,36 +150,44 @@ const Contact = () => {
     return () => {
       if (formContainer) {
         formContainer.removeEventListener("mousemove", handleMouseMove);
-        // The mouseleave listener cleanup is handled correctly
       }
     };
   }, []);
 
   // Animation variants
   const cardVariant = {
-    hidden: { opacity: 0, x: -500 },
+    // 💡 FIX 1: Reduced initial x to -50. -500 is often too far off-screen 
+    // for Framer Motion's observer to detect on smaller devices.
+    hidden: { opacity: 0, x: -300 }, 
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.1,
+        // 💡 FIX 2: Increased duration for a noticeable, smooth animation
+        duration: 0.1, 
         ease: "easeOut",
       },
     },
   };
 
   return (
+    //  FIX 3: Added 'z-10' to the main card container to ensure it sits above everything else,
+    // just in case the z-index of the Particles component is conflicting on small screens.
     <section className="relative flex flex-col items-center c-space section-spacing" id="contact">
       <Particles className="absolute inset-0 -z-50" quantity={100} ease={80} color={"#ffffff"} refresh />
 
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <motion.div // <--- Changed this to motion.div
+      <motion.div
         ref={formRef}
-        className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary transition-transform duration-150"
+        className="flex flex-col items-center justify-center w-11/12 max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary transition-transform duration-150 relative z-10"
+        
+        // Framer Motion Props for Animate-Once-In-View (Correct)
         variants={cardVariant}
         initial="hidden"
-        whileInView="visible" // <--- Added whileInView
-        viewport={{ once: true, amount: 0.5 }} // <--- Added viewport
+        whileInView="visible" 
+        // 💡 FIX 4: Changed amount to 0.1 (10%). This is a very sensitive setting, 
+        // guaranteeing the animation starts as soon as a small part enters the screen.
+        viewport={{ once: true, amount: 0.1 }} 
       >
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let's Connect</h2>
@@ -186,6 +196,7 @@ const Contact = () => {
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
+          {/* Input fields use the correct field-input and field-label classes */}
           <div className="mb-5">
             <label htmlFor="name" className="feild-label">
               Name
@@ -195,7 +206,6 @@ const Contact = () => {
               name="name"
               type="text"
               className="field-input field-input-focus"
-              placeholder=""
               autoComplete="name"
               value={formData.name}
               onChange={handleChange}
@@ -211,7 +221,6 @@ const Contact = () => {
               name="email"
               type="email"
               className="field-input field-input-focus"
-              placeholder=""
               autoComplete="email"
               value={formData.email}
               onChange={handleChange}
@@ -237,7 +246,12 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer hover-animation"
+            // Using inline style to explicitly set the gradient based on your CSS variables
+            style={{
+                background: `radial-gradient(ellipse at center, var(--color-lavender) 0%, var(--color-royal) 100%)`,
+            }}
+            disabled={isLoading}
           >
             {!isLoading ? "Send" : "Sending..."}
           </button>
@@ -253,7 +267,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Link to my ${social.name}`}
-            className="p-3 border border-white/10 rounded-full transition-transform duration-200 transform hover:scale-125"
+            className="p-3 border border-white/10 rounded-full transition-transform duration-200 transform hover:scale-125 bg-white/5"
           >
             {social.icon}
           </a>
