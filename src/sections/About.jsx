@@ -51,7 +51,7 @@ const About = () => {
       x: 0,
       transition: {
         delay: i * 0.1, // stagger by index
-        duration: 0.1,  // slow motion
+        duration: 0.1,  // slow motion
         ease: "easeOut",
       },
     }),
@@ -60,11 +60,16 @@ const About = () => {
   return (
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
+      {/* KEY FIX: 
+        1. Added 'auto-rows-[16rem]' for mobile screens (the default 'col-span-1' combined with this ensures each card takes up a full row with a fixed height).
+        2. Kept 'md:auto-rows-[18rem]' for medium and larger screens.
+      */}
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-6 auto-rows-[16rem] md:auto-rows-[18rem] mt-12">
         
         {/* Grid 1: Personal Introduction */}
         <motion.div 
           ref={el => cardRefs.current[0] = el}
+          // The 'col-span-3' will become 'col-span-1' on mobile due to 'grid-cols-1'
           className="relative flex items-end p-6 overflow-hidden text-white rounded-lg bg-gray-800 md:col-span-3 transition-transform duration-150"
           variants={cardVariant}
           initial="hidden"
@@ -90,6 +95,7 @@ const About = () => {
         {/* Grid 2: Core Principles */}
         <motion.div 
           ref={el => cardRefs.current[1] = el}
+          // The 'col-span-3' will become 'col-span-1' on mobile
           className="relative flex flex-col items-center justify-center p-6 rounded-lg bg-gray-700 md:col-span-3 transition-transform duration-150"
           variants={cardVariant}
           initial="hidden"
@@ -115,6 +121,7 @@ const About = () => {
         {/* Grid 3: Time Zone and Location */}
         <motion.div 
           ref={el => cardRefs.current[2] = el}
+          // The 'col-span-2' will become 'col-span-1' on mobile
           className="relative flex flex-col p-6 rounded-lg bg-black text-white md:col-span-2 transition-transform duration-150"
           variants={cardVariant}
           initial="hidden"
@@ -142,6 +149,7 @@ const About = () => {
         {/* Grid 4: Call to Action */}
         <motion.div 
           ref={el => cardRefs.current[3] = el}
+          // The 'col-span-2' will become 'col-span-1' on mobile
           className="relative flex flex-col items-center justify-center p-6 text-center rounded-lg bg-gray-700 text-white md:col-span-2 transition-transform duration-150"
           variants={cardVariant}
           initial="hidden"
@@ -163,6 +171,7 @@ const About = () => {
         {/* Grid 5: Tech Stack */}
         <motion.div 
           ref={el => cardRefs.current[4] = el}
+          // The 'col-span-2' will become 'col-span-1' on mobile
           className="relative flex flex-col p-6 rounded-lg bg-gray-800 text-white md:col-span-2 transition-transform duration-150"
           variants={cardVariant}
           initial="hidden"
