@@ -60,7 +60,7 @@ const About = () => {
   return (
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-6 auto-rows-[16rem] md:auto-rows-[18rem] mt-12">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-6 mt-12">
         
         {/* Grid 1: Personal Introduction */}
         <motion.div 
