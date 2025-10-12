@@ -99,9 +99,6 @@ This project is deployed on **Vercel**.
 
 ## Contact
 Feel free to reach out to me for questions or collaborations.
-
-GitHub: manishrajupreti
-
 Email: manishrajupreti@gmail.com
 
 ## Suggestions or Feedback
