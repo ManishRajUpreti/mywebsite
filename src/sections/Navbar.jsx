@@ -1,39 +1,40 @@
 import { useState } from "react";
 import { motion } from "framer-motion"; // Corrected import for framer-motion
 
-function Navigation() {
+function Navigation({ onSelect }) {
   return (
     <ul className="nav-ul">
       <li className="nav-li">
-        <a className="nav-link" href="#hero">
+        <button className="nav-link" onClick={() => onSelect("hero")}>
           Home
-        </a>
+        </button>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#about">
+        <button className="nav-link" onClick={() => onSelect("about")}>
           About
-        </a>
+        </button>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#projects">
+        <button className="nav-link" onClick={() => onSelect("projects")}>
           Projects
-        </a>
+        </button>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#work-experience">
+        <button className="nav-link" onClick={() => onSelect("work")}>
           Work
-        </a>
+        </button>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#contact">
+        <button className="nav-link" onClick={() => onSelect("contact")}>
           Contact
-        </a>
+        </button>
       </li>
     </ul>
   );
 }
 
-const Navbar = () => {
+
+const Navbar = ({ setActiveSection }) => {
   const [isOpen, setIsOpen] = useState(false);
   const yourName = "Manish"; // Your name for the brand/logo
 
@@ -44,23 +45,23 @@ const Navbar = () => {
           <a
             href="/"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
-            aria-label="Go to homepage" // Added for accessibility
+            aria-label="Go to homepage"
           >
-            {yourName}
+            Manish
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
-            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"} // Dynamic aria-label
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             <img
               src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
               className="w-6 h-6"
-              alt={isOpen ? "Close menu icon" : "Menu icon"} // More descriptive alt text
+              alt={isOpen ? "Close menu icon" : "Menu icon"}
             />
           </button>
           <nav className="hidden sm:flex">
-            <Navigation />
+            <Navigation onSelect={setActiveSection} />
           </nav>
         </div>
       </div>
@@ -73,7 +74,8 @@ const Navbar = () => {
           transition={{ duration: 1 }}
         >
           <nav className="pb-5">
-            <Navigation />
+            <Navigation onSelect={(section) => { setActiveSection(section); setIsOpen(false); }} />
+            {/* Close menu after selecting */}
           </nav>
         </motion.div>
       )}
