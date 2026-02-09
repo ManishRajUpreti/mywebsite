@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -7,8 +8,10 @@ import Experiences from "./sections/Experiences";
 import Testimonial from "./sections/Testimonial";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import TermsPage from "./pages/TermsPage";
+import PrivacyPage from "./pages/PrivacyPage";
 
-const App = () => {
+const MainContent = () => {
   const [activeSection, setActiveSection] = useState("hero");
 
   const renderSection = () => {
@@ -34,6 +37,18 @@ const App = () => {
       {renderSection()}
       <Footer />
     </div>
+  );
+};
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+      </Routes>
+    </Router>
   );
 };
 

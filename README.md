@@ -2,6 +2,11 @@
 
 A modern, animated 3D developer portfolio built with **React**, **Three.js**, and **TailwindCSS**. This project is designed to help you stand out and creatively showcase your skills with a unique, visually striking experience.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red)](https://github.com/ManishRajUpreti/mywebsite)
+
+> 🌟 This project is **open source** and available for anyone to use, learn from, and customize for their own portfolio!
+
 ---
 
 ## Features
@@ -92,6 +97,24 @@ The application will be accessible at http://localhost:5173.
 ## Assets & Attributions
 All 3D models, textures, and other assets used in this project are located in the public/ directory.
 
+## Contributing
+
+We welcome contributions! 🎉 Whether it's bug fixes, new features, or improvements, feel free to contribute.
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+You are free to:
+- ✅ Use this project for personal or commercial purposes
+- ✅ Modify and customize it for your needs
+- ✅ Distribute copies of the project
+- ✅ Use it as a template for your own portfolio
+
+Just make sure to include the original license and copyright notice! 📄
+
 ## Deployment
 This project is deployed on **Vercel**.  
 🔗 Live URL: [manishrajupreti.com.np](https://manishrajupreti.com.np)
@@ -100,6 +123,14 @@ This project is deployed on **Vercel**.
 ## Contact
 Feel free to reach out to me for questions or collaborations.
 Email: manishrajupreti@gmail.com
+
+## Acknowledgments
+
+This project was inspired by and built upon concepts from the developer community. Special thanks to all the open-source contributors and the amazing tools that made this possible.
+
+## Star This Repo! ⭐
+
+If you find this project helpful or use it for your own portfolio, please consider giving it a star! It helps others discover it and motivates further development.
 
 ## Suggestions or Feedback
 If you have any suggestions for improving this project, please open an issue or contact me directly. Your feedback is highly appreciated!

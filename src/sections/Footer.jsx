@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { mySocials } from "../constants";
 
 const Footer = () => {
@@ -9,13 +10,13 @@ const Footer = () => {
     <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 p-8">
       <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
       <div className="flex gap-2">
-        <a href="/terms" className="hover:text-white transition-colors duration-200">
+        <Link to="/terms" className="hover:text-white transition-colors duration-200">
           Terms & Conditions
-        </a>
+        </Link>
         <p>|</p>
-        <a href="/privacy" className="hover:text-white transition-colors duration-200">
+        <Link to="/privacy" className="hover:text-white transition-colors duration-200">
           Privacy Policy
-        </a>
+        </Link>
       </div>
       <div className="flex gap-3">
         {mySocials.map((social, index) => (
