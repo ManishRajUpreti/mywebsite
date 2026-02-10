@@ -4,50 +4,67 @@ A modern, animated 3D developer portfolio built with **React**, **Three.js**, an
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red)](https://github.com/ManishRajUpreti/mywebsite)
+[![React](https://img.shields.io/badge/React-19.0-blue.svg)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-6.1-purple.svg)](https://vitejs.dev)
 
-> 🌟 This project is **open source** and available for anyone to use, learn from, and customize for their own portfolio!
-
----
-
-## Features
-
--   **Immersive 3D visuals** powered by React Three Fiber and Drei.
--   **Fluid animations** and **scroll-based effects** using Framer Motion.
--   **Clean and responsive UI** built with TailwindCSS.
--   A **working contact form** integrated with EmailJS.
--   **Enhanced UI components** from Aceternity UI and Magic UI.
--   **Fast development environment** powered by Vite.
+>  This project is **open source** and available for anyone to use, learn from, and customize for their own portfolio!
 
 ---
 
-## Tech Stack
+##  Features
 
-| Tech               | Description                                                        |
-| :----------------- | :----------------------------------------------------------------- |
-| **React** | A front-end JavaScript library for building user interfaces.       |
-| **Vite** | A next-generation frontend tooling that provides a fast development experience. |
-| **TailwindCSS** | A utility-first CSS framework for rapidly building custom designs. |
-| **React Three Fiber** | A React renderer for Three.js, making it easy to create 3D graphics in your React app. |
-| **Drei** | A collection of useful helpers and abstractions for React Three Fiber. |
-| **Framer Motion** | A production-ready animation library for React.                    |
-| **EmailJS** | A service to send emails directly from JavaScript, without a backend. |
-| **Aceternity UI** | A set of beautiful, pre-built UI components for React.             |
-| **Magic UI** | Another set of pre-built UI elements and design extras.            |
+- **Immersive 3D Visuals** — Powered by React Three Fiber and Drei for stunning 3D graphics
+- **Smooth Animations** — Scroll-based effects and transitions using Framer Motion
+- **Responsive Design** — Clean, modern UI built with TailwindCSS, works on all devices
+- **Working Contact Form** — Integrated with EmailJS for direct email communications
+- **SEO Optimized** — Proper meta tags and semantic HTML for search engine visibility
+- **Accessibility First** — WCAG 2.1 compliant with keyboard navigation and ARIA labels
+- **Error Handling** — Error boundaries and proper error states for reliability
+- **Fast & Optimized** — Built with Vite for lightning-fast development and production builds
 
 ---
 
-## Project Structure
+##  Tech Stack
+
+| Technology | Purpose |
+| :--- | :--- |
+| **React 19** | Modern UI library with hooks and concurrent features |
+| **Vite 6** | Ultra-fast build tool and development server |
+| **TailwindCSS 4** | Utility-first CSS framework for rapid styling |
+| **React Three Fiber** | React renderer for Three.js WebGL graphics |
+| **React Router v7** | Client-side routing for multi-page functionality |
+| **Framer Motion** | Production-ready animation library |
+| **EmailJS** | Backend-less email service for contact forms |
+| **React Helmet Async** | SEO meta tag management |
+| **Three.js** | 3D graphics library |
+| **Maath** | Mathematical utilities for animations |
+
+---
+
+##  Project Structure
 ```
 .
 ├── public/
-│   ├── assets/
-│   |   └── ...
-│   ├── models/
-│   |   └── ...
+│   ├── assets/          # Images, logos, project screenshots
+│   ├── models/          # 3D models
 │   └── ...
 ├── src/
-|   ├── components/
-|   |   ├── Alert.jsx
+│   ├── components/      # Reusable UI components
+│   ├── sections/        # Page sections (Hero, About, Projects, etc.)
+│   ├── pages/           # Full page components (Terms, Privacy)
+│   ├── constants/       # Configuration and constants
+│   ├── App.jsx          # Main application component
+│   ├── main.jsx         # Entry point
+│   └── index.css        # Global styles
+├── .env.example         # Environment variables template
+├── CONTRIBUTING.md      # Contribution guidelines
+├── DEVELOPMENT.md       # Development best practices
+├── LICENSE              # MIT License
+├── package.json         # Project dependencies
+├── vite.config.js       # Vite configuration
+├── tailwind.config.js   # TailwindCSS configuration
+└── README.md            # This file
+```
 |   |   └── ...
 |   ├── constants/
 |   |   └── index.js
@@ -69,55 +86,248 @@ A modern, animated 3D developer portfolio built with **React**, **Three.js**, an
 ```
 
 
-## Getting Started
+##  Getting Started
 
-Follow these steps to set up and run the project locally.
+### Prerequisites
+- Node.js 18+ or higher
+- npm or yarn package manager
+- Git for version control
 
-1. Clone the Repository
+### Installation
 
+1. **Clone the Repository**
 ```bash
-git clone [https://github.com/manishrajupreti/mywebsite.git](https://github.com/manishrajupreti/mywebsite.git)
+git clone https://github.com/ManishRajUpreti/mywebsite.git
 cd mywebsite
 ```
 
-2. Install Dependencies
-
+2. **Install Dependencies**
 ```bash
 npm install
 ```
 
-3. Run the Development Server
+3. **Configure Environment Variables**
+```bash
+cp .env.example .env.local
+# Edit .env.local with your configuration
+```
 
+4. **Run the Development Server**
 ```bash
 npm run dev
 ```
-The application will be accessible at http://localhost:5173.
+The application will be accessible at `http://localhost:5173`
 
+### Available Scripts
 
-## Assets & Attributions
-All 3D models, textures, and other assets used in this project are located in the public/ directory.
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Create optimized production build |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Check code quality with ESLint |
 
-## Contributing
+##  Configuration
 
-We welcome contributions! 🎉 Whether it's bug fixes, new features, or improvements, feel free to contribute.
+### Environment Variables
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
+Copy `.env.example` to `.env.local` and configure:
 
-## License
+```env
+# EmailJS Configuration
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+# Optional: Analytics and Third-party Services
+VITE_GOOGLE_ANALYTICS_ID=your_ga_id
+VITE_ENABLE_ANALYTICS=false
+```
+
+### Customization
+
+1. **Update your portfolio data** in `src/constants/index.js`
+2. **Replace content** with your own information
+3. **Update social links** in the constants
+4. **Add your projects** and work experiences
+5. **Update meta tags** in `index.html` for SEO
+
+##  Customization Guide
+
+### Adding Projects
+
+Edit `src/constants/index.js`:
+```javascript
+export const myProjects = [
+  {
+    id: 1,
+    title: "Your Project",
+    description: "Project description",
+    href: "https://github.com/...",
+    image: "assets/projects/your-project.png",
+    tags: [
+      { id: 1, name: "React", path: "assets/logos/react.svg" }
+    ]
+  }
+];
+```
+
+### Adding Work Experience
+
+```javascript
+export const experiences = [
+  {
+    title: "Your Role",
+    job: "Company Name",
+    date: "2023 - 2024",
+    contents: [
+      "Achievement 1",
+      "Achievement 2"
+    ]
+  }
+];
+```
+
+### Styling
+
+- Uses TailwindCSS for all styling
+- Custom CSS in `src/index.css`
+- Dark theme by default (can be customized in `tailwind.config.js`)
+
+##  Browser Support
+
+| Browser | Support |
+| :--- | :--- |
+| Chrome | ✅ Latest 2 versions |
+| Firefox | ✅ Latest 2 versions |
+| Safari | ✅ Latest 2 versions |
+| Edge | ✅ Latest 2 versions |
+| Mobile Browsers | ✅ iOS Safari, Chrome Mobile |
+
+## ♿ Accessibility
+
+This project follows **WCAG 2.1 Level AA** standards:
+- ✅ Keyboard navigation support
+- ✅ ARIA labels and semantic HTML
+- ✅ Focus indicators on interactive elements
+- ✅ Sufficient color contrast ratios
+- ✅ Error boundaries and graceful error handling
+
+##  Security & Privacy
+
+- SEO optimized with proper meta tags
+- Privacy policy page included
+- Terms of use page included
+- Error handling with ErrorBoundary
+- No sensitive data stored in frontend
+
+##  Assets & Attributions
+
+All 3D models, textures, and assets are located in the `public/` directory. Ensure you have proper licenses for any third-party assets you use.
+
+##  Contributing
+
+We welcome contributions! Whether it's bug fixes, features, or improvements, please contribute.
+
+### Steps to Contribute:
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+For detailed guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md) and [DEVELOPMENT.md](DEVELOPMENT.md).
+
+## 📜 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 You are free to:
-- ✅ Use this project for personal or commercial purposes
-- ✅ Modify and customize it for your needs
-- ✅ Distribute copies of the project
-- ✅ Use it as a template for your own portfolio
+- ✅ Use for personal or commercial projects
+- ✅ Modify and customize
+- ✅ Distribute or sublicense
+- ✅ Use as a template
 
-Just make sure to include the original license and copyright notice! 📄
+**Requirement**: Include the original license and copyright notice in your project.
 
-## Deployment
-This project is deployed on **Vercel**.  
-🔗 Live URL: [manishrajupreti.com.np](https://manishrajupreti.com.np)
+## 🚀 Deployment
+
+This project is optimized for deployment on:
+- **Vercel** (Recommended)
+- **Netlify**
+- **GitHub Pages**
+- **Any Node.js hosting**
+
+### Deploy to Vercel
+
+```bash
+npm install -g vercel
+vercel
+```
+
+### Live Demo
+🔗 [manishrajupreti.com.np](https://manishrajupreti.com.np)
+
+##  Contact & Support
+
+For questions, suggestions, or issues:
+- Email: manishrajupreti@gmail.com
+- GitHub Issues: [Report an issue](https://github.com/ManishRajUpreti/mywebsite/issues)
+- Twitter/X: [@ManishRajUpreti](https://twitter.com)
+
+##  Acknowledgments
+
+This project was inspired by and built with concepts from:
+- The React community
+- Open-source contributors
+- Modern web development best practices
+- WCAG accessibility guidelines
+
+Special thanks to all the amazing tools and libraries used:
+- **React** and ecosystem
+- **Three.js** and **React Three Fiber**
+- **TailwindCSS**
+- **Framer Motion**
+- All other open-source contributors
+
+##  Support This Project
+
+If you find this project helpful or use it for your portfolio, please consider:
+- Giving it a star 
+- Sharing it with others
+- Contributing improvements
+- Providing feedback
+
+Your support motivates further development!
+
+##  Bug Reports & Feature Requests
+
+Have a bug or feature request? Please open an issue with:
+- Clear description of the problem
+- Steps to reproduce (for bugs)
+- Expected vs actual behavior
+- Environment details (browser, OS, Node version)
+
+##  Roadmap
+
+Planned features and improvements:
+- [ ] Blog section
+- [ ] Dark/Light theme toggle
+- [ ] Multi-language support
+- [ ] Analytics integration
+- [ ] Component storybook
+- [ ] Unit and integration tests
+- [ ] Performance monitoring
+
+---
+
+<div align="center">
+
+Made by [Manish Raj Upreti](https://github.com/ManishRajUpreti)
+
+[Report Bug](https://github.com/ManishRajUpreti/mywebsite/issues) • [Request Feature](https://github.com/ManishRajUpreti/mywebsite/issues) • [View Demo](https://manishrajupreti.com.np)
+
+</div>
 
 
 ## Contact
@@ -128,7 +338,7 @@ Email: manishrajupreti@gmail.com
 
 This project was inspired by and built upon concepts from the developer community. Special thanks to all the open-source contributors and the amazing tools that made this possible.
 
-## Star This Repo! ⭐
+## Star This Repo! 
 
 If you find this project helpful or use it for your own portfolio, please consider giving it a star! It helps others discover it and motivates further development.
 

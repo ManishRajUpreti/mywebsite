@@ -1,11 +1,22 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPage = () => {
   return (
-    <div className="min-h-screen bg-black text-white py-16 px-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-        <p className="text-neutral-400 mb-6">Last Updated: February 8, 2026</p>
+    <>
+      <Helmet>
+        <title>Privacy Policy - Manish Raj Upreti</title>
+        <meta name="description" content="Privacy Policy for Manish Raj Upreti's portfolio website. Learn how your information is collected and protected." />
+        <meta property="og:title" content="Privacy Policy - Manish Raj Upreti" />
+        <meta property="og:description" content="Privacy Policy and data protection information" />
+      </Helmet>
+      
+      <main className="min-h-screen bg-black text-white py-20 px-4 sm:px-8">
+        <article className="max-w-4xl mx-auto">
+          <header className="mb-12">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4">Privacy Policy</h1>
+            <time className="text-neutral-400 text-sm">Last Updated: February 8, 2026</time>
+          </header>
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
@@ -129,13 +140,14 @@ const PrivacyPage = () => {
         <div className="mt-12">
           <Link
             to="/"
-            className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+            className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-3 py-2 rounded"
           >
             ← Back to Home
           </Link>
         </div>
-      </div>
-    </div>
+      </article>
+    </main>
+    </>
   );
 };
 

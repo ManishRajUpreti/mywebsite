@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location (update to your live site URL if different)
+Sitemap: https://manishrajupreti.github.io/sitemap.xml
