@@ -1,4 +1,6 @@
 import { Suspense } from "react";
+import { Helmet } from "react-helmet-async";
+import { mySocials } from "../constants";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float } from "@react-three/drei"; // Float component for subtle floating animation
 import { useMediaQuery } from "react-responsive"; // Hook to check screen size
@@ -16,6 +18,18 @@ const Hero = () => {
 
   return (
     <section className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space" id="hero">
+      <Helmet>
+        <title>Manish Raj Upreti — Software Engineer</title>
+        <meta name="description" content="Manish Raj Upreti — software engineer, open-source contributor and portfolio. View projects, experience, and contact." />
+        <link rel="canonical" href="/" />
+        <script type="application/ld+json">{`${JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Manish Raj Upreti",
+          url: "https://manishrajupreti.github.io/",
+          sameAs: mySocials.map(s => s.href).filter(Boolean),
+        })}`}</script>
+      </Helmet>
       {/* Component to display your main hero text */}
       <HeroText />
       {/* Component for the parallax background effect */}

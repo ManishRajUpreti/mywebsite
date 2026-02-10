@@ -1,13 +1,24 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const TermsPage = () => {
   return (
-    <div className="min-h-screen bg-black text-white py-16 px-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">Terms of Use</h1>
-        <p className="text-neutral-400 mb-6">Last Updated: February 8, 2026</p>
+    <>
+      <Helmet>
+        <title>Terms of Use - Manish Raj Upreti</title>
+        <meta name="description" content="Terms of Use for Manish Raj Upreti's portfolio website. Learn about the open-source MIT license and usage terms." />
+        <meta property="og:title" content="Terms of Use - Manish Raj Upreti" />
+        <meta property="og:description" content="Terms of Use and open-source license information" />
+      </Helmet>
+      
+      <main className="min-h-screen bg-black text-white py-20 px-4 sm:px-8">
+        <article className="max-w-4xl mx-auto">
+          <header className="mb-12">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4">Terms of Use</h1>
+            <time className="text-neutral-400 text-sm">Last Updated: February 8, 2026</time>
+          </header>
 
-        <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-6 mb-8">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-6 mb-8 focus:outline-none focus:ring-2 focus:ring-blue-400" role="note">
           <h3 className="text-xl font-semibold mb-3 text-blue-400">Open Source Notice</h3>
           <p className="text-neutral-300 leading-relaxed">
             This website is built using open-source code licensed under the MIT License. The source
@@ -124,13 +135,14 @@ const TermsPage = () => {
         <div className="mt-12">
           <Link
             to="/"
-            className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+            className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 px-3 py-2 rounded"
           >
             ← Back to Home
           </Link>
         </div>
-      </div>
-    </div>
+      </article>
+    </main>
+    </>
   );
 };
 
